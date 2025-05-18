@@ -9,21 +9,21 @@ const GallerySection = () => {
       id: 1,
       title: "Brand Story: Ocean Cleanup",
       type: "video",
-      thumbnail: "https://images.unsplash.com/photo-1596265371388-43edbaadab94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      thumbnail: "/lovable-uploads/98fb3be6-2555-4178-92c9-58ff71316afd.png",
       icon: Play
     },
     {
       id: 2,
       title: "Travel Series: Hidden Cities",
       type: "video",
-      thumbnail: "https://images.unsplash.com/photo-1596470220600-3be7aecb5c64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      thumbnail: "/lovable-uploads/efa05f0b-a978-4c22-9bbb-0f2fba348b9e.png",
       icon: Play
     },
     {
       id: 3,
       title: "Social Campaign: Green Earth",
       type: "image",
-      thumbnail: "https://images.unsplash.com/photo-1564419320461-6870880221ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80",
+      thumbnail: "/lovable-uploads/9cbf2178-3d36-4cf3-a732-a30f7138d27c.png",
       icon: Image
     },
     {
