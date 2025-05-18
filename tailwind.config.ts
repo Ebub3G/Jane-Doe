@@ -66,10 +66,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				beige: "#F5F0E1",
-				softbrown: "#826F66",
-				lavender: "#E5DEFF",
-				navy: "#2D3047",
+				indigo: "#7F56D9",
+				lavender: "#F4EBFF",
+				neutral: "#101828",
+				textgray: "#667085",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -78,20 +78,12 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
 				},
 				'fade-in': {
 					'0%': {

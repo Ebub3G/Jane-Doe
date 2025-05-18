@@ -11,29 +11,29 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center bg-gradient-to-br from-white to-lavender/30 dark:from-navy dark:to-navy/90 relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center bg-gradient-to-br from-white to-lavender/30 dark:from-neutral dark:to-neutral/90 relative overflow-hidden">
       <div className="container-custom flex flex-col-reverse lg:flex-row items-center justify-between gap-8 md:gap-12">
         <div className="flex-1 text-center lg:text-left space-y-6 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-navy dark:text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral dark:text-white">
             <span className="block">Jane Doe</span>
           </h1>
-          <h2 className="text-xl md:text-2xl text-navy/80 dark:text-lavender/90 font-light mt-2">
+          <h2 className="text-xl md:text-2xl text-neutral/80 dark:text-lavender font-light mt-2">
             Creating Stories That Connect
           </h2>
-          <p className="text-lg md:text-xl text-navy/70 dark:text-white/70 max-w-2xl mx-auto lg:mx-0">
+          <p className="text-lg md:text-xl text-textgray dark:text-white/70 max-w-2xl mx-auto lg:mx-0">
             Content creator, storyteller and digital artist crafting immersive visual experiences for brands and audiences worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
             <Button 
               onClick={scrollToContact}
-              className="bg-navy hover:bg-navy/80 text-white text-lg px-8 py-6 dark:bg-lavender dark:text-navy"
+              className="bg-indigo hover:bg-indigo/90 text-white text-lg px-8 py-6 rounded-xl dark:bg-indigo dark:text-white"
             >
               Hire Me
             </Button>
             <Button 
               onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline" 
-              className="border-navy text-navy hover:bg-navy/10 text-lg px-8 py-6 dark:border-lavender dark:text-lavender dark:hover:bg-lavender/20"
+              className="border-indigo text-indigo hover:bg-indigo/10 text-lg px-8 py-6 rounded-xl dark:border-lavender dark:text-lavender dark:hover:bg-lavender/20"
             >
               View My Work
             </Button>
@@ -52,7 +52,7 @@ const HeroSection = () => {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-lavender/30 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-lavender rounded-full blur-3xl"></div>
       <div className="absolute -top-24 -right-24 w-72 h-72 bg-lavender/20 rounded-full blur-3xl"></div>
     </section>
   );

@@ -51,20 +51,20 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="section-padding bg-lavender/10 dark:bg-navy">
+    <section id="testimonials" className="section-padding bg-lavender/10 dark:bg-neutral/90">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold text-navy dark:text-white mb-2 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-neutral dark:text-white mb-2 text-center">
           Testimonials
         </h2>
-        <p className="text-navy/70 dark:text-lavender/70 text-center text-lg mb-12 max-w-2xl mx-auto">
+        <p className="text-textgray dark:text-lavender/70 text-center text-lg mb-12 max-w-2xl mx-auto">
           What clients and collaborators say about working with me
         </p>
         
         <div className="relative max-w-4xl mx-auto">
-          <Card className="testimonial-gradient dark:bg-navy/50 border-0 shadow-xl">
+          <Card className="testimonial-gradient dark:bg-neutral/50 border-0 shadow-xl rounded-xl">
             <CardContent className="p-6 md:p-10">
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white dark:border-navy mb-6">
+                <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white dark:border-indigo/30 mb-6">
                   <img 
                     src={testimonials[activeIndex].avatar} 
                     alt={testimonials[activeIndex].name} 
@@ -72,13 +72,13 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 
-                <blockquote className="text-lg md:text-xl text-navy/80 dark:text-white/90 mb-6 italic">
+                <blockquote className="text-lg md:text-xl text-textgray dark:text-white/90 mb-6 italic">
                   "{testimonials[activeIndex].quote}"
                 </blockquote>
                 
                 <div>
-                  <h4 className="font-semibold text-navy dark:text-white">{testimonials[activeIndex].name}</h4>
-                  <p className="text-navy/70 dark:text-lavender/70">
+                  <h4 className="font-semibold text-neutral dark:text-white">{testimonials[activeIndex].name}</h4>
+                  <p className="text-textgray dark:text-lavender/70">
                     {testimonials[activeIndex].position}, {testimonials[activeIndex].company}
                   </p>
                 </div>
@@ -90,14 +90,14 @@ const TestimonialsSection = () => {
             <Button 
               onClick={prevTestimonial} 
               variant="outline" 
-              className="border-navy/30 text-navy dark:border-lavender/30 dark:text-lavender"
+              className="border-indigo/30 text-indigo dark:border-lavender/30 dark:text-lavender rounded-xl"
             >
               Previous
             </Button>
             <Button 
               onClick={nextTestimonial} 
               variant="outline" 
-              className="border-navy/30 text-navy dark:border-lavender/30 dark:text-lavender"
+              className="border-indigo/30 text-indigo dark:border-lavender/30 dark:text-lavender rounded-xl"
             >
               Next
             </Button>
@@ -110,8 +110,8 @@ const TestimonialsSection = () => {
                 onClick={() => setActiveIndex(index)}
                 className={`w-2.5 h-2.5 rounded-full ${
                   index === activeIndex 
-                    ? 'bg-navy dark:bg-lavender' 
-                    : 'bg-navy/30 dark:bg-lavender/30'
+                    ? 'bg-indigo dark:bg-lavender' 
+                    : 'bg-indigo/30 dark:bg-lavender/30'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
