@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 255 255 255;
-    --foreground: 45 48 71;
+    --background: 245 240 225;
+    --foreground: 85 70 65;
 
     --card: 255 255 255;
-    --card-foreground: 45 48 71;
+    --card-foreground: 85 70 65;
 
     --popover: 255 255 255;
-    --popover-foreground: 45 48 71;
+    --popover-foreground: 85 70 65;
 
-    --primary: 45 48 71;
-    --primary-foreground: 255 255 255;
+    --primary: 30 20% 90%;
+    --primary-foreground: 85 70 65;
 
-    --secondary: 229 222 255;
-    --secondary-foreground: 45 48 71;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 85 70 65;
 
     --muted: 240 240 245;
     --muted-foreground: 115 115 130;
 
-    --accent: 229 222 255;
-    --accent-foreground: 45 48 71;
+    --accent: 240 5% 96%;
+    --accent-foreground: 85 70 65;
 
-    --destructive: 255 0 0;
+    --destructive: 355 80% 60%;
     --destructive-foreground: 255 255 255;
 
-    --border: 229 222 255;
-    --input: 229 222 255;
-    --ring: 229 222 255;
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 30 15% 85%;
 
     --radius: 0.5rem;
 
@@ -48,33 +48,33 @@
   }
 
   .dark {
-    --background: 45 48 71;
-    --foreground: 255 255 255;
+    --background: 85 70 65;
+    --foreground: 245 240 225;
 
-    --card: 50 53 76;
-    --card-foreground: 255 255 255;
+    --card: 95 80 75;
+    --card-foreground: 245 240 225;
 
-    --popover: 45 48 71;
-    --popover-foreground: 255 255 255;
+    --popover: 85 70 65;
+    --popover-foreground: 245 240 225;
 
-    --primary: 229 222 255;
-    --primary-foreground: 45 48 71;
+    --primary: 30 25% 85%;
+    --primary-foreground: 85 70 65;
 
-    --secondary: 60 63 86;
-    --secondary-foreground: 255 255 255;
+    --secondary: 95 10% 25%;
+    --secondary-foreground: 245 240 225;
 
-    --muted: 60 63 86;
-    --muted-foreground: 170 170 180;
+    --muted: 95 10% 25%;
+    --muted-foreground: 245 240 225;
 
-    --accent: 60 63 86;
-    --accent-foreground: 255 255 255;
+    --accent: 95 10% 25%;
+    --accent-foreground: 245 240 225;
 
-    --destructive: 255 50 50;
-    --destructive-foreground: 255 255 255;
+    --destructive: 355 70% 60%;
+    --destructive-foreground: 245 240 225;
 
-    --border: 60 63 86;
-    --input: 60 63 86;
-    --ring: 229 222 255;
+    --border: 95 10% 25%;
+    --input: 95 10% 25%;
+    --ring: 30 25% 85%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -112,7 +112,7 @@
 
   .nav-link {
     @apply relative text-foreground hover:text-foreground/80 transition-colors
-      after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-lavender
+      after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-beige
       after:left-0 after:right-0 after:bottom-0 after:mx-auto after:transition-all
       after:duration-300 hover:after:w-full;
   }
@@ -123,7 +123,7 @@
 }
 
 .testimonial-gradient {
-  background: linear-gradient(135deg, rgba(229, 222, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(245, 240, 225, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 
 .gallery-item {
@@ -132,7 +132,7 @@
 
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px -5px rgba(45, 48, 71, 0.1), 0 8px 10px -6px rgba(45, 48, 71, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(130, 111, 102, 0.1), 0 8px 10px -6px rgba(130, 111, 102, 0.1);
 }
 
 .services-card {
@@ -141,5 +141,5 @@
 
 .services-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px -5px rgba(45, 48, 71, 0.1), 0 8px 10px -6px rgba(45, 48, 71, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(130, 111, 102, 0.1), 0 8px 10px -6px rgba(130, 111, 102, 0.1);
 }

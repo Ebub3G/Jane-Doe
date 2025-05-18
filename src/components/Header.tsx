@@ -24,12 +24,12 @@ const Header = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-md dark:bg-navy/90' : 'bg-transparent'
+        scrolled ? 'bg-white/90 backdrop-blur-md shadow-md dark:bg-softbrown/90' : 'bg-transparent'
       }`}
     >
       <div className="container-custom flex items-center justify-between py-4">
         <div className="font-bold text-xl md:text-2xl">
-          <a href="#hero" className="text-navy dark:text-white">Jane Doe</a>
+          <a href="#hero" className="text-softbrown dark:text-beige">Jane Doe</a>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -41,7 +41,7 @@ const Header = () => {
         
         <Button 
           onClick={() => scrollToSection('contact')}
-          className="bg-navy hover:bg-navy/90 text-white dark:bg-lavender dark:text-navy dark:hover:bg-lavender/90"
+          className="bg-softbrown hover:bg-softbrown/90 text-beige dark:bg-beige dark:text-softbrown dark:hover:bg-beige/90"
         >
           Let's Collaborate
         </Button>
