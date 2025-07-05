@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import DarkModeToggle from './DarkModeToggle';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,15 +37,19 @@ const Header = () => {
           <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
           <button onClick={() => scrollToSection('gallery')} className="nav-link">Gallery</button>
           <button onClick={() => scrollToSection('services')} className="nav-link">Services</button>
+          <button onClick={() => scrollToSection('blog')} className="nav-link">Blog</button>
           <button onClick={() => scrollToSection('testimonials')} className="nav-link">Testimonials</button>
         </nav>
         
-        <Button 
-          onClick={() => scrollToSection('contact')}
-          className="bg-indigo hover:bg-indigo/90 text-white dark:bg-indigo dark:text-white dark:hover:bg-indigo/90 rounded-xl"
-        >
-          Let's Collaborate
-        </Button>
+        <div className="flex items-center gap-3">
+          <DarkModeToggle />
+          <Button 
+            onClick={() => scrollToSection('contact')}
+            className="bg-indigo hover:bg-indigo/90 text-white dark:bg-indigo dark:text-white dark:hover:bg-indigo/90 rounded-xl"
+          >
+            Let's Collaborate
+          </Button>
+        </div>
       </div>
     </header>
   );
