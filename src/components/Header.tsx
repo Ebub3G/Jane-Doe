@@ -25,29 +25,29 @@ const Header = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-md dark:bg-neutral/90' : 'bg-transparent'
+        scrolled ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="container-custom flex items-center justify-between py-4">
         <div className="font-bold text-xl md:text-2xl">
-          <a href="#hero" className="text-neutral dark:text-white">Jane Doe</a>
+          <a href="#hero" className="text-white">Alex Chen</a>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
-          <button onClick={() => scrollToSection('gallery')} className="nav-link">Gallery</button>
-          <button onClick={() => scrollToSection('services')} className="nav-link">Services</button>
-          <button onClick={() => scrollToSection('blog')} className="nav-link">Blog</button>
-          <button onClick={() => scrollToSection('testimonials')} className="nav-link">Testimonials</button>
+          <button onClick={() => scrollToSection('about')} className="text-white/80 hover:text-white transition-colors">About</button>
+          <button onClick={() => scrollToSection('gallery')} className="text-white/80 hover:text-white transition-colors">Reviews</button>
+          <button onClick={() => scrollToSection('services')} className="text-white/80 hover:text-white transition-colors">Categories</button>
+          <button onClick={() => scrollToSection('blog')} className="text-white/80 hover:text-white transition-colors">Articles</button>
+          <button onClick={() => scrollToSection('testimonials')} className="text-white/80 hover:text-white transition-colors">Community</button>
         </nav>
         
         <div className="flex items-center gap-3">
           <DarkModeToggle />
           <Button 
             onClick={() => scrollToSection('contact')}
-            className="bg-indigo hover:bg-indigo/90 text-white dark:bg-indigo dark:text-white dark:hover:bg-indigo/90 rounded-xl"
+            className="bg-red-600 hover:bg-red-700 text-white rounded-xl"
           >
-            Let's Collaborate
+            Partner With Me
           </Button>
         </div>
       </div>

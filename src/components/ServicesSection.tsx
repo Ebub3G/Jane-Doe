@@ -1,53 +1,67 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Video, Edit, Instagram, Camera } from 'lucide-react';
+import { Video, Smartphone, Car, Home, Headphones, Monitor } from 'lucide-react';
 
 const ServicesSection = () => {
-  const services = [
+  const categories = [
     {
-      title: "Video Production",
-      description: "Full-service video creation from concept to final delivery, including filming, editing, and color grading.",
-      icon: Video
+      title: "Smartphone Reviews",
+      description: "In-depth analysis of the latest phones, from cameras to performance, helping you choose your next device.",
+      icon: Smartphone,
+      color: "text-blue-500"
     },
     {
-      title: "Content Writing",
-      description: "Engaging scripts, captions, and articles that tell your story and connect with your audience.",
-      icon: Edit
+      title: "Electric Vehicles",
+      description: "First drives, range tests, and comprehensive reviews of the future of transportation.",
+      icon: Car,
+      color: "text-green-500"
     },
     {
-      title: "Social Media Management",
-      description: "Strategic planning and management of your social media presence to build engagement and followers.",
-      icon: Instagram
+      title: "Smart Home Tech",
+      description: "Testing and reviewing the gadgets that make your home smarter, safer, and more efficient.",
+      icon: Home,
+      color: "text-purple-500"
     },
     {
-      title: "UGC Creation",
-      description: "Authentic user-generated style content that showcases your products in real-life contexts.",
-      icon: Camera
+      title: "Audio Equipment",
+      description: "From earbuds to studio monitors, finding the perfect sound for every budget and use case.",
+      icon: Headphones,
+      color: "text-red-500"
+    },
+    {
+      title: "Displays & Monitors",
+      description: "Gaming monitors, professional displays, and TVs - visual technology that enhances your experience.",
+      icon: Monitor,
+      color: "text-yellow-500"
+    },
+    {
+      title: "Tech Documentaries",
+      description: "Behind-the-scenes content, factory tours, and deep dives into how technology is made.",
+      icon: Video,
+      color: "text-indigo-500"
     }
   ];
 
   return (
-    <section id="services" className="section-padding bg-white dark:bg-neutral">
+    <section id="services" className="section-padding bg-neutral/5 dark:bg-neutral/20">
       <div className="container-custom">
         <h2 className="text-3xl md:text-4xl font-bold text-neutral dark:text-white mb-2 text-center">
-          Services Offered
+          Content Categories
         </h2>
-        <p className="text-textgray dark:text-lavender/70 text-center text-lg mb-12 max-w-2xl mx-auto">
-          Creative solutions to elevate your digital presence
+        <p className="text-textgray dark:text-white/70 text-center text-lg mb-12 max-w-2xl mx-auto">
+          Covering the technology that matters most
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="services-card border border-lavender/30 dark:border-transparent bg-white dark:bg-neutral/50 rounded-xl">
-              <CardContent className="p-6 md:p-8 flex flex-col items-center text-center md:text-left md:flex-row md:items-start">
-                <div className="mb-4 md:mb-0 md:mr-6 bg-lavender dark:bg-lavender/10 p-4 rounded-full">
-                  <service.icon className="w-8 h-8 text-indigo dark:text-white" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category, index) => (
+            <Card key={index} className="services-card border border-neutral/10 dark:border-white/10 bg-white dark:bg-neutral/30 rounded-xl overflow-hidden group">
+              <CardContent className="p-6">
+                <div className="mb-4 bg-neutral/5 dark:bg-white/5 p-4 rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
+                  <category.icon className={`w-8 h-8 ${category.color}`} />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-neutral dark:text-white mb-2">{service.title}</h3>
-                  <p className="text-textgray dark:text-white/70">{service.description}</p>
-                </div>
+                <h3 className="text-xl font-semibold text-neutral dark:text-white mb-3">{category.title}</h3>
+                <p className="text-textgray dark:text-white/70 leading-relaxed">{category.description}</p>
               </CardContent>
             </Card>
           ))}

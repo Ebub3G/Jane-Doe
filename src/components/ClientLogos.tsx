@@ -2,64 +2,64 @@
 import React from 'react';
 
 const ClientLogos = () => {
-  const clients = [
+  const partners = [
     { 
-      name: "Netflix", 
-      logo: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      description: "Streaming Platform"
+      name: "Apple", 
+      logo: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      description: "Review Partner"
     },
     { 
-      name: "Adobe", 
-      logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      description: "Creative Software"
+      name: "Google", 
+      logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      description: "Tech Collaboration"
     },
     { 
-      name: "Spotify", 
-      logo: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      description: "Music Streaming"
+      name: "Samsung", 
+      logo: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      description: "Launch Partner"
     },
     { 
-      name: "Airbnb", 
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      description: "Travel Platform"
+      name: "Tesla", 
+      logo: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      description: "EV Coverage"
     },
     { 
-      name: "Nike", 
-      logo: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      description: "Athletic Brand"
+      name: "Sony", 
+      logo: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      description: "Audio Reviews"
     },
     { 
       name: "Microsoft", 
       logo: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      description: "Technology"
+      description: "Surface Partner"
     }
   ];
 
   return (
-    <section className="section-padding bg-white dark:bg-neutral">
+    <section className="section-padding bg-white dark:bg-black">
       <div className="container-custom">
         <h2 className="text-2xl md:text-3xl font-bold text-neutral dark:text-white mb-2 text-center">
-          Trusted by Leading Brands
+          Brand Partners
         </h2>
-        <p className="text-textgray dark:text-lavender/70 text-center mb-12 max-w-2xl mx-auto">
-          I've had the privilege of working with amazing companies to bring their stories to life
+        <p className="text-textgray dark:text-white/70 text-center mb-12 max-w-2xl mx-auto">
+          Collaborating with leading tech companies to bring you the latest innovations
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {clients.map((client, index) => (
-            <div key={index} className="flex flex-col items-center p-4 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-              <div className="w-16 h-16 mb-3 rounded-lg overflow-hidden">
+          {partners.map((partner, index) => (
+            <div key={index} className="flex flex-col items-center p-4 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 group">
+              <div className="w-16 h-16 mb-3 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
                 <img 
-                  src={client.logo} 
-                  alt={`${client.name} logo`}
+                  src={partner.logo} 
+                  alt={`${partner.name} logo`}
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-sm font-semibold text-neutral dark:text-white mb-1">
-                {client.name}
+                {partner.name}
               </h3>
-              <p className="text-xs text-textgray dark:text-lavender/70 text-center">
-                {client.description}
+              <p className="text-xs text-textgray dark:text-white/70 text-center">
+                {partner.description}
               </p>
             </div>
           ))}
