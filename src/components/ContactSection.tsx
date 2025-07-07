@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { Instagram, MessageSquare, Link } from 'lucide-react';
+import { Youtube, Twitter, Instagram, Mail, Link } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
@@ -24,12 +24,12 @@ const ContactSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-neutral dark:text-white mb-2 text-center">
           Get In Touch
         </h2>
-        <p className="text-textgray dark:text-lavender/70 text-center text-lg mb-12 max-w-2xl mx-auto">
-          Let's discuss your project or collaboration opportunities
+        <p className="text-textgray dark:text-white/70 text-center text-lg mb-12 max-w-2xl mx-auto">
+          Interested in collaboration, product reviews, or partnership opportunities?
         </p>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <Card className="border border-lavender/30 dark:border-transparent bg-white dark:bg-neutral/50 rounded-xl">
+          <Card className="border border-red-500/20 dark:border-transparent bg-white dark:bg-neutral/50 rounded-xl">
             <CardContent className="p-6 md:p-8">
               <h3 className="text-xl font-semibold text-neutral dark:text-white mb-6">Send Me a Message</h3>
               
@@ -39,7 +39,7 @@ const ContactSection = () => {
                   <Input 
                     id="name" 
                     placeholder="Your name" 
-                    className="border-lavender/30 focus:border-indigo dark:border-neutral/30 dark:focus:border-lavender bg-white dark:bg-neutral/50 rounded-lg" 
+                    className="border-red-500/30 focus:border-red-500 dark:border-neutral/30 dark:focus:border-red-500 bg-white dark:bg-neutral/50 rounded-lg" 
                     required
                   />
                 </div>
@@ -50,7 +50,7 @@ const ContactSection = () => {
                     id="email" 
                     type="email" 
                     placeholder="Your email" 
-                    className="border-lavender/30 focus:border-indigo dark:border-neutral/30 dark:focus:border-lavender bg-white dark:bg-neutral/50 rounded-lg" 
+                    className="border-red-500/30 focus:border-red-500 dark:border-neutral/30 dark:focus:border-red-500 bg-white dark:bg-neutral/50 rounded-lg" 
                     required
                   />
                 </div>
@@ -59,15 +59,15 @@ const ContactSection = () => {
                   <label htmlFor="message" className="text-textgray dark:text-white/80 block text-sm">Message</label>
                   <Textarea 
                     id="message" 
-                    placeholder="Your message" 
-                    className="min-h-32 border-lavender/30 focus:border-indigo dark:border-neutral/30 dark:focus:border-lavender bg-white dark:bg-neutral/50 rounded-lg" 
+                    placeholder="Tell me about your product, collaboration idea, or question..." 
+                    className="min-h-32 border-red-500/30 focus:border-red-500 dark:border-neutral/30 dark:focus:border-red-500 bg-white dark:bg-neutral/50 rounded-lg" 
                     required
                   />
                 </div>
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-indigo hover:bg-indigo/90 text-white dark:bg-indigo dark:text-white dark:hover:bg-indigo/90 rounded-xl"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white rounded-xl"
                 >
                   Send Message
                 </Button>
@@ -76,51 +76,74 @@ const ContactSection = () => {
           </Card>
           
           <div className="space-y-8">
-            <Card className="border border-lavender/30 dark:border-transparent bg-white dark:bg-neutral/50 rounded-xl">
+            <Card className="border border-red-500/20 dark:border-transparent bg-white dark:bg-neutral/50 rounded-xl">
               <CardContent className="p-6 md:p-8">
                 <h3 className="text-xl font-semibold text-neutral dark:text-white mb-6">Connect With Me</h3>
                 
                 <div className="space-y-6">
-                  <a href="#" className="flex items-center space-x-4 text-neutral hover:text-neutral/80 dark:text-white dark:hover:text-white/80 transition-colors">
-                    <div className="bg-lavender dark:bg-lavender/10 p-3 rounded-full">
-                      <Instagram className="w-5 h-5 text-indigo dark:text-white" />
+                  <a href="https://youtube.com/@alexchentech" className="flex items-center space-x-4 text-neutral hover:text-neutral/80 dark:text-white dark:hover:text-white/80 transition-colors">
+                    <div className="bg-red-600/10 dark:bg-red-600/20 p-3 rounded-full">
+                      <Youtube className="w-5 h-5 text-red-600 dark:text-red-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium">YouTube</h4>
+                      <p className="text-sm text-textgray dark:text-white/70">@alexchentech</p>
+                    </div>
+                  </a>
+                  
+                  <a href="https://twitter.com/alexchentech" className="flex items-center space-x-4 text-neutral hover:text-neutral/80 dark:text-white dark:hover:text-white/80 transition-colors">
+                    <div className="bg-blue-500/10 dark:bg-blue-500/20 p-3 rounded-full">
+                      <Twitter className="w-5 h-5 text-blue-500 dark:text-blue-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium">Twitter</h4>
+                      <p className="text-sm text-textgray dark:text-white/70">@alexchentech</p>
+                    </div>
+                  </a>
+                  
+                  <a href="https://instagram.com/alexchentech" className="flex items-center space-x-4 text-neutral hover:text-neutral/80 dark:text-white dark:hover:text-white/80 transition-colors">
+                    <div className="bg-pink-500/10 dark:bg-pink-500/20 p-3 rounded-full">
+                      <Instagram className="w-5 h-5 text-pink-500 dark:text-pink-400" />
                     </div>
                     <div>
                       <h4 className="font-medium">Instagram</h4>
-                      <p className="text-sm text-textgray dark:text-white/70">@janedoecreates</p>
+                      <p className="text-sm text-textgray dark:text-white/70">@alexchentech</p>
                     </div>
-                  </a>
+                  </div>
                   
-                  <a href="mailto:hello@janedoe.com" className="flex items-center space-x-4 text-neutral hover:text-neutral/80 dark:text-white dark:hover:text-white/80 transition-colors">
-                    <div className="bg-lavender dark:bg-lavender/10 p-3 rounded-full">
-                      <MessageSquare className="w-5 h-5 text-indigo dark:text-white" />
+                  <a href="mailto:hello@alexchentech.com" className="flex items-center space-x-4 text-neutral hover:text-neutral/80 dark:text-white dark:hover:text-white/80 transition-colors">
+                    <div className="bg-neutral/10 dark:bg-white/10 p-3 rounded-full">
+                      <Mail className="w-5 h-5 text-neutral dark:text-white" />
                     </div>
                     <div>
-                      <h4 className="font-medium">Email</h4>
-                      <p className="text-sm text-textgray dark:text-white/70">hello@janedoe.com</p>
+                      <h4 className="font-medium">Business Email</h4>
+                      <p className="text-sm text-textgray dark:text-white/70">hello@alexchentech.com</p>
                     </div>
                   </a>
                   
-                  <a href="#" className="flex items-center space-x-4 text-neutral hover:text-neutral/80 dark:text-white dark:hover:text-white/80 transition-colors">
-                    <div className="bg-lavender dark:bg-lavender/10 p-3 rounded-full">
-                      <Link className="w-5 h-5 text-indigo dark:text-white" />
+                  <a href="https://alexchentech.com" className="flex items-center space-x-4 text-neutral hover:text-neutral/80 dark:text-white dark:hover:text-white/80 transition-colors">
+                    <div className="bg-neutral/10 dark:bg-white/10 p-3 rounded-full">
+                      <Link className="w-5 h-5 text-neutral dark:text-white" />
                     </div>
                     <div>
                       <h4 className="font-medium">Website</h4>
-                      <p className="text-sm text-textgray dark:text-white/70">janedoe.com</p>
+                      <p className="text-sm text-textgray dark:text-white/70">alexchentech.com</p>
                     </div>
                   </a>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="border border-lavender/30 dark:border-transparent bg-white dark:bg-neutral/50 rounded-xl">
+            <Card className="border border-red-500/20 dark:border-transparent bg-white dark:bg-neutral/50 rounded-xl">
               <CardContent className="p-6 md:p-8">
-                <h3 className="text-xl font-semibold text-neutral dark:text-white mb-4">Availability</h3>
-                <p className="text-textgray dark:text-white/80">
-                  Currently available for freelance projects, collaborations, and consulting work.
+                <h3 className="text-xl font-semibold text-neutral dark:text-white mb-4">For Brands & PR</h3>
+                <p className="text-textgray dark:text-white/80 mb-3">
+                  Currently accepting product reviews and brand partnerships. 
                 </p>
-                <p className="text-textgray dark:text-white/80 mt-2">
+                <p className="text-textgray dark:text-white/80 mb-3">
+                  Specializing in: Smartphones, Electric Vehicles, Smart Home, Audio Gear
+                </p>
+                <p className="text-sm text-red-600 dark:text-red-400 font-medium">
                   Response time: 24-48 hours
                 </p>
               </CardContent>
