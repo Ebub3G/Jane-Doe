@@ -76,26 +76,26 @@ const GallerySection = () => {
     : galleryItems.filter(item => item.type === activeFilter);
 
   return (
-    <section id="gallery" className="section-padding bg-neutral/5 dark:bg-neutral/10">
+    <section id="gallery" className="section-padding bg-ghost-white">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold text-neutral dark:text-white mb-2 text-center">
+        <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal-black mb-2 text-center">
           Latest Content
         </h2>
-        <p className="text-textgray dark:text-white/70 text-center text-lg mb-8 max-w-2xl mx-auto">
+        <p className="text-charcoal-black/70 text-center text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl mb-6 xs:mb-8 sm:mb-12 max-w-2xl mx-auto px-2 xs:px-4">
           Reviews, unboxings, and tech insights that millions trust
         </p>
         
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 xs:gap-3 sm:gap-4 mb-8 xs:mb-10 sm:mb-12 px-2 xs:px-4">
           {filters.map((filter) => (
             <Button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
               variant={activeFilter === filter.id ? "default" : "outline"}
-              className={`rounded-full transition-all duration-300 ${
+              className={`rounded-full transition-all duration-300 px-3 xs:px-4 sm:px-6 py-2 xs:py-2.5 sm:py-3 text-xs xs:text-sm sm:text-base ${
                 activeFilter === filter.id
-                  ? "bg-red-600 text-white hover:bg-red-700"
-                  : "border-red-600/30 text-red-600 hover:bg-red-600/10 dark:border-red-400 dark:text-red-400"
+                  ? "bg-electric-blue text-white hover:bg-neon-aqua shadow-lg"
+                  : "border-electric-blue/30 text-electric-blue hover:bg-electric-blue/10 hover:border-electric-blue/50"
               }`}
             >
               {filter.label}
@@ -103,37 +103,37 @@ const GallerySection = () => {
           ))}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 md:gap-8">
           {filteredItems.map((item, index) => (
             <div 
               key={item.id} 
               className="gallery-item opacity-0 animate-fade-in group"
               style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
             >
-              <Card className="overflow-hidden border-transparent h-full bg-white dark:bg-neutral/30 shadow-lg rounded-xl">
-                <div className="relative h-60 w-full overflow-hidden">
+              <Card className="overflow-hidden border-transparent h-full bg-white shadow-lg rounded-xl hover:shadow-xl transition-all duration-300">
+                <div className="relative h-32 xs:h-40 sm:h-48 md:h-60 w-full overflow-hidden">
                   <img 
                     src={item.thumbnail} 
                     alt={item.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
-                  <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-red-600 flex items-center justify-center">
-                    <item.icon className="w-4 h-4 text-white" />
+                  <div className="absolute top-2 xs:top-3 sm:top-4 right-2 xs:right-3 sm:right-4 w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 rounded-full bg-soft-purple flex items-center justify-center">
+                    <item.icon className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 text-white" />
                   </div>
-                  <div className="absolute bottom-4 left-4 bg-black/70 text-white px-2 py-1 rounded text-xs">
+                  <div className="absolute bottom-2 xs:bottom-3 sm:bottom-4 left-2 xs:left-3 sm:left-4 bg-charcoal-black/80 text-white px-2 xs:px-2.5 sm:px-3 py-1 xs:py-1.5 rounded text-xs xs:text-sm font-medium">
                     {item.views}
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full">
-                      <ExternalLink className="w-4 h-4 mr-2" />
+                    <Button className="bg-electric-blue hover:bg-neon-aqua text-white rounded-full px-3 xs:px-4 sm:px-6 py-2 xs:py-2.5 sm:py-3 text-xs xs:text-sm sm:text-base shadow-lg">
+                      <ExternalLink className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 mr-1.5 xs:mr-2" />
                       Watch Now
                     </Button>
                   </div>
                 </div>
-                <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold text-neutral dark:text-white mb-1">{item.title}</h3>
-                  <p className="text-sm text-textgray dark:text-white/70 capitalize">{item.category}</p>
+                <CardContent className="p-3 xs:p-4 sm:p-5 md:p-6">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-semibold text-charcoal-black mb-1 xs:mb-2 line-clamp-2">{item.title}</h3>
+                  <p className="text-xs xs:text-sm sm:text-base text-charcoal-black/60 capitalize font-medium">{item.category}</p>
                 </CardContent>
               </Card>
             </div>
