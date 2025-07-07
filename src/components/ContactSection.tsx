@@ -109,7 +109,7 @@ const ContactSection = () => {
                       <h4 className="font-medium">Instagram</h4>
                       <p className="text-sm text-textgray dark:text-white/70">@alexchentech</p>
                     </div>
-                  </div>
+                  </a>
                   
                   <a href="mailto:hello@alexchentech.com" className="flex items-center space-x-4 text-neutral hover:text-neutral/80 dark:text-white dark:hover:text-white/80 transition-colors">
                     <div className="bg-neutral/10 dark:bg-white/10 p-3 rounded-full">
