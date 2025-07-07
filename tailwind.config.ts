@@ -65,48 +65,61 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// New modern color scheme
-				slate: {
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					200: '#e2e8f0',
-					300: '#cbd5e1',
-					400: '#94a3b8',
-					500: '#64748b',
-					600: '#475569',
-					700: '#334155',
-					800: '#1e293b',
-					900: '#0f172a'
-				},
+				// New Electric Blue Tech Color Scheme
+				'electric-blue': '#007BFF',
+				'ghost-white': '#F8F9FA',
+				'charcoal-black': '#212529',
+				'neon-aqua': '#00E5FF',
+				'soft-purple': '#9B59B6',
+				// Shades and variations
 				blue: {
-					50: '#eff6ff',
-					100: '#dbeafe',
-					200: '#bfdbfe',
-					300: '#93c5fd',
-					400: '#60a5fa',
-					500: '#3b82f6',
-					600: '#2563eb',
-					700: '#1d4ed8',
-					800: '#1e40af',
-					900: '#1e3a8a'
+					50: '#E3F2FD',
+					100: '#BBDEFB',
+					200: '#90CAF9',
+					300: '#64B5F6',
+					400: '#42A5F5',
+					500: '#007BFF', // Electric Blue
+					600: '#0056B3',
+					700: '#004085',
+					800: '#002752',
+					900: '#001429'
 				},
-				emerald: {
-					50: '#ecfdf5',
-					100: '#d1fae5',
-					200: '#a7f3d0',
-					300: '#6ee7b7',
-					400: '#34d399',
-					500: '#10b981',
-					600: '#059669',
-					700: '#047857',
-					800: '#065f46',
-					900: '#064e3b'
+				gray: {
+					50: '#F8F9FA', // Ghost White
+					100: '#E9ECEF',
+					200: '#DEE2E6',
+					300: '#CED4DA',
+					400: '#ADB5BD',
+					500: '#6C757D',
+					600: '#495057',
+					700: '#343A40',
+					800: '#212529', // Charcoal Black
+					900: '#0D1117'
 				},
-				// Legacy colors for compatibility
-				indigo: "#3b82f6",
-				lavender: "#eff6ff",
-				neutral: "#1e293b",
-				textgray: "#64748b",
+				purple: {
+					50: '#F3E5F5',
+					100: '#E1BEE7',
+					200: '#CE93D8',
+					300: '#BA68C8',
+					400: '#AB47BC',
+					500: '#9B59B6', // Soft Purple
+					600: '#8E44AD',
+					700: '#7B1FA2',
+					800: '#6A1B9A',
+					900: '#4A148C'
+				},
+				cyan: {
+					50: '#E0F7FF',
+					100: '#B3EBFF',
+					200: '#80DEEA',
+					300: '#4DD0E1',
+					400: '#26C6DA',
+					500: '#00E5FF', // Neon Aqua
+					600: '#00B8D4',
+					700: '#0097A7',
+					800: '#00838F',
+					900: '#006064'
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
