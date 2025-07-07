@@ -36,12 +36,12 @@ const ClientLogos = () => {
   ];
 
   return (
-    <section className="section-padding bg-slate-50">
+    <section className="section-padding bg-ghost-white">
       <div className="container-custom">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-2 text-center">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-charcoal-black mb-2 text-center">
           Brand Partners
         </h2>
-        <p className="text-slate-600 text-center mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-4">
+        <p className="text-charcoal-black/70 text-center mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-4">
           Collaborating with leading tech companies to bring you the latest innovations
         </p>
         
@@ -55,10 +55,10 @@ const ClientLogos = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xs sm:text-sm font-semibold text-slate-900 mb-1">
+              <h3 className="text-xs sm:text-sm font-semibold text-charcoal-black mb-1">
                 {partner.name}
               </h3>
-              <p className="text-xs text-slate-500 text-center">
+              <p className="text-xs text-charcoal-black/60 text-center">
                 {partner.description}
               </p>
             </div>

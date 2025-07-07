@@ -19,7 +19,7 @@ const TestimonialsSection = () => {
       name: "Sarah Johnson",
       position: "Marketing Director",
       company: "EcoTech",
-      quote: "Jane's creative vision transformed our campaign. Her understanding of our brand and audience delivered content that not only looked amazing but also drove real engagement and conversions.",
+      quote: "Alex's creative vision transformed our campaign. His understanding of our brand and audience delivered content that not only looked amazing but also drove real engagement and conversions.",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
     },
     {
@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
       name: "Michael Chen",
       position: "Founder",
       company: "Pulse Media",
-      quote: "Working with Jane has been a game-changer for our content strategy. Her attention to detail and storytelling abilities have helped us connect with our audience in ways we never thought possible.",
+      quote: "Working with Alex has been a game-changer for our content strategy. His attention to detail and storytelling abilities have helped us connect with our audience in ways we never thought possible.",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
     },
     {
@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
       name: "Alex Rodriguez",
       position: "Creative Director",
       company: "Horizon Studios",
-      quote: "Jane doesn't just create content, she crafts experiences. Her work consistently exceeds expectations and has been instrumental in growing our brand presence across multiple platforms.",
+      quote: "Alex doesn't just create content, he crafts experiences. His work consistently exceeds expectations and has been instrumental in growing our brand presence across multiple platforms.",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80"
     }
   ];
@@ -51,20 +51,20 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="section-padding bg-lavender/10 dark:bg-neutral/90">
+    <section id="testimonials" className="section-padding bg-ghost-white">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold text-neutral dark:text-white mb-2 text-center">
-          Testimonials
+        <h2 className="text-3xl md:text-4xl font-bold text-charcoal-black mb-2 text-center">
+          Community Voices
         </h2>
-        <p className="text-textgray dark:text-lavender/70 text-center text-lg mb-12 max-w-2xl mx-auto">
-          What clients and collaborators say about working with me
+        <p className="text-charcoal-black/70 text-center text-lg mb-12 max-w-2xl mx-auto">
+          What brands and collaborators say about working with Alex
         </p>
         
         <div className="relative max-w-4xl mx-auto">
-          <Card className="testimonial-gradient dark:bg-neutral/50 border-0 shadow-xl rounded-xl">
+          <Card className="testimonial-gradient border-electric-blue/20 shadow-xl rounded-xl">
             <CardContent className="p-6 md:p-10">
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white dark:border-indigo/30 mb-6">
+                <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-electric-blue/20 mb-6">
                   <img 
                     src={testimonials[activeIndex].avatar} 
                     alt={testimonials[activeIndex].name} 
@@ -72,13 +72,13 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 
-                <blockquote className="text-lg md:text-xl text-textgray dark:text-white/90 mb-6 italic">
+                <blockquote className="text-lg md:text-xl text-charcoal-black mb-6 italic">
                   "{testimonials[activeIndex].quote}"
                 </blockquote>
                 
                 <div>
-                  <h4 className="font-semibold text-neutral dark:text-white">{testimonials[activeIndex].name}</h4>
-                  <p className="text-textgray dark:text-lavender/70">
+                  <h4 className="font-semibold text-charcoal-black">{testimonials[activeIndex].name}</h4>
+                  <p className="text-charcoal-black/70">
                     {testimonials[activeIndex].position}, {testimonials[activeIndex].company}
                   </p>
                 </div>
@@ -90,14 +90,14 @@ const TestimonialsSection = () => {
             <Button 
               onClick={prevTestimonial} 
               variant="outline" 
-              className="border-indigo/30 text-indigo dark:border-lavender/30 dark:text-lavender rounded-xl"
+              className="border-electric-blue/30 text-electric-blue hover:bg-electric-blue/10 rounded-xl"
             >
               Previous
             </Button>
             <Button 
               onClick={nextTestimonial} 
               variant="outline" 
-              className="border-indigo/30 text-indigo dark:border-lavender/30 dark:text-lavender rounded-xl"
+              className="border-electric-blue/30 text-electric-blue hover:bg-electric-blue/10 rounded-xl"
             >
               Next
             </Button>
@@ -110,8 +110,8 @@ const TestimonialsSection = () => {
                 onClick={() => setActiveIndex(index)}
                 className={`w-2.5 h-2.5 rounded-full ${
                   index === activeIndex 
-                    ? 'bg-indigo dark:bg-lavender' 
-                    : 'bg-indigo/30 dark:bg-lavender/30'
+                    ? 'bg-electric-blue' 
+                    : 'bg-electric-blue/30'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
