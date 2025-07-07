@@ -36,29 +36,29 @@ const ClientLogos = () => {
   ];
 
   return (
-    <section className="section-padding bg-white dark:bg-black">
+    <section className="section-padding bg-slate-50">
       <div className="container-custom">
-        <h2 className="text-2xl md:text-3xl font-bold text-neutral dark:text-white mb-2 text-center">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-2 text-center">
           Brand Partners
         </h2>
-        <p className="text-textgray dark:text-white/70 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-slate-600 text-center mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-4">
           Collaborating with leading tech companies to bring you the latest innovations
         </p>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8 items-center">
           {partners.map((partner, index) => (
-            <div key={index} className="flex flex-col items-center p-4 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 group">
-              <div className="w-16 h-16 mb-3 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
+            <div key={index} className="flex flex-col items-center p-3 sm:p-4 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 group">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mb-2 sm:mb-3 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
                 <img 
                   src={partner.logo} 
                   alt={`${partner.name} logo`}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-sm font-semibold text-neutral dark:text-white mb-1">
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-900 mb-1">
                 {partner.name}
               </h3>
-              <p className="text-xs text-textgray dark:text-white/70 text-center">
+              <p className="text-xs text-slate-500 text-center">
                 {partner.description}
               </p>
             </div>

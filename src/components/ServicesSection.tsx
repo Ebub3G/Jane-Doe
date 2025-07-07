@@ -15,7 +15,7 @@ const ServicesSection = () => {
       title: "Electric Vehicles",
       description: "First drives, range tests, and comprehensive reviews of the future of transportation.",
       icon: Car,
-      color: "text-green-500"
+      color: "text-emerald-500"
     },
     {
       title: "Smart Home Tech",
@@ -44,24 +44,24 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-neutral/5 dark:bg-neutral/20">
+    <section id="services" className="section-padding bg-slate-50">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold text-neutral dark:text-white mb-2 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-2 text-center">
           Content Categories
         </h2>
-        <p className="text-textgray dark:text-white/70 text-center text-lg mb-12 max-w-2xl mx-auto">
+        <p className="text-slate-600 text-center text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
           Covering the technology that matters most
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {categories.map((category, index) => (
-            <Card key={index} className="services-card border border-neutral/10 dark:border-white/10 bg-white dark:bg-neutral/30 rounded-xl overflow-hidden group">
-              <CardContent className="p-6">
-                <div className="mb-4 bg-neutral/5 dark:bg-white/5 p-4 rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
-                  <category.icon className={`w-8 h-8 ${category.color}`} />
+            <Card key={index} className="services-card border border-slate-200 bg-white rounded-xl overflow-hidden group shadow-md">
+              <CardContent className="p-4 sm:p-6">
+                <div className="mb-3 sm:mb-4 bg-slate-100 p-3 sm:p-4 rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
+                  <category.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${category.color}`} />
                 </div>
-                <h3 className="text-xl font-semibold text-neutral dark:text-white mb-3">{category.title}</h3>
-                <p className="text-textgray dark:text-white/70 leading-relaxed">{category.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2 sm:mb-3">{category.title}</h3>
+                <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{category.description}</p>
               </CardContent>
             </Card>
           ))}
