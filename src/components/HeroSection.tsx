@@ -37,7 +37,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mt-6 sm:mt-8 px-4 lg:px-0">
             <Button 
               onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-electric-blue border-white/30 hover:bg-white text-electric-blue text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-xl flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-electric-blue border-white/30 text-white/30 hover:bg-white text-electric-blue text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-xl flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Play className="w-4 h-4 sm:w-5 sm:h-5" />
               Watch Latest Reviews
