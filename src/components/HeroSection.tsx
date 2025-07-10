@@ -45,7 +45,7 @@ const HeroSection = () => {
             <Button 
               onClick={scrollToContact}
               variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 hover:border-neon-aqua text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-xl transition-all duration-300"
+              className="bg-electric-blue border-white/30 text-white hover:bg-white/10 hover:border-neon-aqua text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-xl transition-all duration-300"
             >
               Collaborate
             </Button>
